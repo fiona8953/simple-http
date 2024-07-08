@@ -1,8 +1,8 @@
 FROM golang:1.17 AS builder
 LABEL maintainer="Daniel Lynch <danplynch@gmail.com>"
-RUN mkdir -p /go/src/github.com/randomtask1155/simple-http
+RUN mkdir -p /go/src/github.com/fiona8953/simple-http
 ENV GOPATH=/go
-WORKDIR $GOPATH/src/github.com/randomtask1155/simple-http
+WORKDIR $GOPATH/src/github.com/fiona8953/simple-http
 ENV PATH=$GOPATH/bin:$PATH
 ENV PORT=8080
 ADD . .
@@ -15,7 +15,7 @@ RUN apk --update add ca-certificates
 
 
 FROM scratch
-COPY --from=builder /go/src/github.com/randomtask1155/simple-http/simple-http /go/bin/simple-http
+COPY --from=builder /go/src/github.com/fiona8953/simple-http/simple-http /go/bin/simple-http
 COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 EXPOSE 8080
