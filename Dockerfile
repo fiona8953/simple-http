@@ -1,4 +1,4 @@
-FROM golang:1.16 AS builder
+FROM golang:1.17 AS builder
 LABEL maintainer="Daniel Lynch <danplynch@gmail.com>"
 RUN mkdir -p /go/src/github.com/randomtask1155/simple-http
 ENV GOPATH=/go
