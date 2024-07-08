@@ -1,4 +1,4 @@
-module github.com/randomtask1155/simple-http
+module github.com/fiona8953/simple-http
 
 go 1.17
 
