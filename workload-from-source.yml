@@ -12,6 +12,6 @@ spec:
 #    imgpkgBundle:
 #      image: randomtask1155/simple-http
     git:
-      url: https://github.com/randomtask1155/simple-http
+      url: https://github.com/fiona8953/simple-http
       ref:
         branch: main
